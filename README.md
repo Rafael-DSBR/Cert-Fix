@@ -13,7 +13,7 @@
 ### 📋 The Problem (Diagnosis)
 During a critical update cycle with **SEFAZ (Brazilian Tax Authority)**, hundreds of A3 Digital Certificates failed to communicate due to a "Broken Chain of Trust" and legacy TLS protocol mismatches.
 
-* **Volume:** ~10 high-priority tickets per day escalation to Engineering.
+* **Volume:** ~100 high-priority tickets per day escalation to Engineering.
 * **Bottleneck:** The manual fix required advanced Registry manipulation (`regedit`) and Root CA injection via CLI (`certutil`), procedures that Tier 1 support agents were forbidden or afraid to execute due to risk.
 * **Business Impact:** Clients unable to issue invoices (NF-e).
 
