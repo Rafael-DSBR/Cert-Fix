@@ -13,12 +13,12 @@
 ### 📋 The Problem (Diagnosis)
 During a critical update cycle with **SEFAZ (Brazilian Tax Authority)**, hundreds of A3 Digital Certificates failed to communicate due to a "Broken Chain of Trust" and legacy TLS protocol mismatches.
 
-* **Volume:** ~50 high-priority tickets per day escalation to Engineering.
+* **Volume:** ~10 high-priority tickets per day escalation to Engineering.
 * **Bottleneck:** The manual fix required advanced Registry manipulation (`regedit`) and Root CA injection via CLI (`certutil`), procedures that Tier 1 support agents were forbidden or afraid to execute due to risk.
 * **Business Impact:** Clients unable to issue invoices (NF-e).
 
 ### 🛠️ The Solution (The Automation)
-**Cert-Fix** is a "One-Click Repair" GUI that orchestrates the entire remediation process. It safely executes elevated commands to repair the Windows CryptoAPI environment without requiring technical expertise from the agent.
+**Auto-CertFix** is a "One-Click Repair" GUI that orchestrates the entire remediation process. It safely executes elevated commands to repair the Windows CryptoAPI environment without requiring technical expertise from the agent.
 
 **Capabilities:**
 * ✅ **Chain Repair:** Automates `InstaladorCadeias.exe` (ACBR solution) installation.
@@ -38,14 +38,14 @@ The tool uses Python `subprocess` to bridge the gap between UI and System Shell.
 3.  **Phase 2 (Crypto):** Edits Registry keys to force correct Protocol negotiation (SEFAZ requirement).
 4.  **Phase 3 (Trust):** Loops through `.cer` assets and commits them to the `Root` store.
 
-### How to Run
+### 🚀 How to Run
 
 1.  **Dependencies:**
     ```bash
     pip install customtkinter
     ```
 2.  **Assets Required:**
-    * *Note: This repo contains the source code. To function, the following assets where compiled in root folder:*
+    * *Note: This repo contains the source code. To function, the following assets must be in the root folder:*
     * `InstaladorCadeias_1.0.2.0.exe`
     * `3_CryptoFix.reg`
     * `Raiz-icp-brasil v10.cer`
