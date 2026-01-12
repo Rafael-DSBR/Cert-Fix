@@ -38,14 +38,14 @@ The tool uses Python `subprocess` to bridge the gap between UI and System Shell.
 3.  **Phase 2 (Crypto):** Edits Registry keys to force correct Protocol negotiation (SEFAZ requirement).
 4.  **Phase 3 (Trust):** Loops through `.cer` assets and commits them to the `Root` store.
 
-### 🚀 How to Run
+### How to Run
 
 1.  **Dependencies:**
     ```bash
     pip install customtkinter
     ```
 2.  **Assets Required:**
-    * *Note: This repo contains the source code. To function, the following assets must be in the root folder:*
+    * *Note: This repo contains the source code. To function, the following assets where compiled in root folder:*
     * `InstaladorCadeias_1.0.2.0.exe`
     * `3_CryptoFix.reg`
     * `Raiz-icp-brasil v10.cer`
