@@ -1,12 +1,3 @@
-"""
-PROJECT: Auto-CertFix (PKI Orchestrator)
-AUTHOR: Rafael Cavalheiro
-DESCRIPTION: 
-    Automates the repair of Broken Chain of Trust (ICP-Brasil) and 
-    TLS/SSL Registry fixes for A3 Certificates communicating with SEFAZ.
-    Built to offload Tier 3 tasks to Tier 1 support.
-"""
-
 import customtkinter as ctk
 import subprocess
 import ctypes
